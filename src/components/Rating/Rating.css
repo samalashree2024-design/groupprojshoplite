@@ -1,0 +1,11 @@
+.rating {
+    display: flex;
+    color: #ffa41c;
+    /* Amazon gold star color */
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.rating__star {
+    margin-right: -2px;
+}

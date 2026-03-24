@@ -1,0 +1,126 @@
+.checkout {
+    background-color: white;
+    padding-bottom: 50px;
+}
+
+.checkout__header {
+    background-color: #f7f7f7;
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.checkout__header h1 {
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.checkout__header a {
+    color: #007185;
+    text-decoration: none;
+}
+
+.checkout__header a:hover {
+    text-decoration: underline;
+    color: #c40000;
+}
+
+.checkout__container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.checkout__section {
+    display: flex;
+    padding: 20px;
+    margin: 0 20px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout__title {
+    flex: 0.2;
+}
+
+.checkout__address,
+.checkout__payment,
+.checkout__items {
+    flex: 0.8;
+}
+
+.checkout__address p {
+    margin-bottom: 5px;
+}
+
+.checkout__paymentDetails {
+    max-width: 400px;
+}
+
+.checkout__cardInfo {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 4px;
+    background-color: #fca;
+    /* subtle highlight */
+}
+
+.checkout__priceContainer {
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.checkout__priceContainer h3 {
+    margin-bottom: 15px;
+    color: #B12704;
+    /* Amazon red */
+}
+
+.checkout__priceContainer button {
+    background-color: #ffd814;
+    border: 1px solid;
+    border-color: #fcd200;
+    font-weight: 500;
+    width: 100%;
+    height: 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.checkout__priceContainer button:hover {
+    background-color: #f7ca00;
+}
+
+.checkout__item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.checkout__item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-right: 20px;
+}
+
+.checkout__itemTitle {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.checkout__itemPrice {
+    color: #B12704;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .checkout__section {
+        flex-direction: column;
+    }
+
+    .checkout__title {
+        margin-bottom: 15px;
+    }
+}

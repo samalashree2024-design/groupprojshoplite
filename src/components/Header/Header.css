@@ -1,0 +1,198 @@
+.header__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #131921;
+    /* Amazon dark blue */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 0 10px;
+}
+
+.header__logo {
+    width: 100px;
+    object-fit: contain;
+    margin: 0 20px;
+    margin-top: 18px;
+    filter: brightness(0) invert(1);
+    /* Tweak amazon logo to white */
+}
+
+/* Search bar styles */
+.header__search {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    border-radius: 4px;
+    overflow: hidden;
+    height: 40px;
+}
+
+.header__search:focus-within {
+    box-shadow: 0 0 0 2px #f90;
+    /* Amazon focus orange */
+}
+
+.header__categoryDropdown {
+    background-color: #f3f3f3;
+    color: #333;
+    height: 100%;
+    border: none;
+    font-size: 12px;
+    padding: 0 10px;
+    outline: none;
+    border-right: 1px solid #cdcdcd;
+    cursor: pointer;
+    border-radius: 4px 0 0 4px;
+}
+
+.header__searchInput {
+    height: 100%;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+.header__searchIcon {
+    padding: 5px;
+    height: 100% !important;
+    width: 45px !important;
+    background-color: #febd69;
+    /* Amazon orange button */
+    color: #333;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.header__searchIcon:hover {
+    background-color: #f3a847;
+}
+
+/* Nav styles */
+.header__nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 10px;
+}
+
+.header__option {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+    color: white;
+    cursor: pointer;
+    padding: 8px 5px;
+    border: 1px solid transparent;
+}
+
+.header__option:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.header__optionLineOne {
+    font-size: 10px;
+}
+
+.header__optionLineTwo {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.header__optionBasket {
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    padding: 8px 5px;
+    border: 1px solid transparent;
+}
+
+.header__cartIcon {
+    font-size: 26px;
+}
+
+.header__optionBasket:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.header__basketCount {
+    margin-left: 5px;
+    color: #f08804;
+    font-size: 16px;
+}
+
+/* Bottom Secondary Nav */
+.header__bottom {
+    display: flex;
+    align-items: center;
+    background-color: #232f3e;
+    color: white;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.header__menuItem {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.header__menuItem:hover {
+    border: 1px solid white;
+    border-radius: 2px;
+}
+
+.header__menuIcon {
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px;
+    }
+
+    .header__search {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+        flex: none;
+    }
+
+    .header__logo {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .header__nav {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .header__option {
+        display: none;
+        /* Hide standard options on small screens for simplicity */
+    }
+
+    .header__bottom {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 8px 10px;
+    }
+}

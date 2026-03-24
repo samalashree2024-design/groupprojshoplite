@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "title": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
+    "price": 989.99,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._AC_SX679_.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "2",
+    "title": "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
+    "price": 398.00,
+    "rating": 4,
+    "image": "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SX679_.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "3",
+    " title": "Gildan Men's Crew T-Shirts, Multipack, Style G1100",
+    "price": 18.99,
+    "rating": 4,
+    "image": "https://m.media-amazon.com/images/I/71uA-3m-PXL._AC_UX679_.jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "4",
+    "title": "ASICS Women's Gel-Venture 8 Running Shoes",
+    "price": 54.95,
+    "rating": 4,
+    "image": "https://m.media-amazon.com/images/I/71yZYx77YRL._AC_UY695_.jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "5",
+    "title": "iRobot Roomba 694 Robot Vacuum-Wi-Fi Connectivity",
+    "price": 274.99,
+    "rating": 4,
+    "image": "https://m.media-amazon.com/images/I/81Lns-uS4rL._AC_SX679_.jpg",
+    "category": "Home"
+  },
+  {
+    "id": "6",
+    "title": "Cuisinart 11-Piece Cookware Set",
+    "price": 119.00,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/81I-S7WDBLL._AC_SX679_.jpg",
+    "category": "Home"
+  },
+  {
+    "id": "7",
+    "title": "Atomic Habits: An Easy & Proven Way to Build Good Habits",
+    "price": 11.98,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/81bGKUa1e0L._SY466_.jpg",
+    "category": "Books"
+  },
+  {
+    "id": "8",
+    "title": "System Design Interview – An insider's guide",
+    "price": 37.99,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/611X8GI7hpL._SY466_.jpg",
+    "category": "Books"
+  },
+  {
+    "id": "9",
+    "title": "PlayStation 5 Console (PS5)",
+    "price": 499.00,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/619BkvKW35L._SX679_.jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "10",
+    "title": "DualSense Wireless Controller",
+    "price": 69.00,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/61r5fM7FveL._SX679_.jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "11",
+    "title": "Nintendo Switch – OLED Model w/ White Joy-Con",
+    "price": 349.99,
+    "rating": 5,
+    "image": "https://m.media-amazon.com/images/I/71fL-b2lW-L._SX679_.jpg",
+    "category": "Gaming"
+  }
+]

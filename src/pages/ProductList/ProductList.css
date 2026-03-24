@@ -1,0 +1,52 @@
+.productList {
+    padding: 20px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.productList__header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.productList__header h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.productList__header p {
+    font-size: 14px;
+    color: #565959;
+    margin-top: 5px;
+}
+
+.productList__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.productList__item {
+    display: flex;
+    justify-content: center;
+}
+
+/* Ensure the product card fits well in the grid */
+.productList__item>.productCard {
+    margin: 0;
+    width: 100%;
+}
+
+.productList__empty {
+    text-align: center;
+    margin-top: 50px;
+    padding: 40px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.productList__empty h3 {
+    color: #c40000;
+    margin-bottom: 10px;
+}

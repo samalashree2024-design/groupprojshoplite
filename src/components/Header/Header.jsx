@@ -28,13 +28,40 @@ function Header() {
         <div className="header__container">
             {/* Top Main Navbar */}
             <div className="header">
-                <Link to="/">
-                    <img
-                        className="header__logo"
-                        src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
-                        alt="Shoplite Logo"
-                    />
-                </Link>
+              {/* --- COPY START --- */}
+<Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
+  <div style={{ 
+    display: 'flex', 
+    alignItems: 'center', 
+    padding: '2px 10px',
+    margin: '0 10px',
+    border: '1px solid transparent',
+    cursor: 'pointer'
+  }}>
+    {/* The New Icon */}
+    <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
+      <span style={{ fontSize: '30px' }}>🛒</span> {/* Shopping Cart Emoji */}
+      <span style={{ 
+        position: 'absolute', 
+        top: '-5px', 
+        right: '-5px', 
+        fontSize: '18px' 
+      }}>💡</span> {/* Lightbulb Emoji */}
+    </div>
+    
+    {/* The Text */}
+    <span style={{ 
+      fontSize: '20px', 
+      fontWeight: '800', 
+      marginLeft: '8px',
+      color: 'white',
+      fontFamily: 'inherit'
+    }}>
+      ShopLite
+    </span>
+  </div>
+</Link>
+{/* --- COPY END --- */}
 
                 {/* Search Bar */}
                 <div className="header__search">

@@ -6,7 +6,7 @@ import { getCartItemsCount } from '../../context/reducer';
 import './Header.css';
 
 function Header() {
-    const [{ cart }, dispatch] = useStateValue();
+    const [{ cart, user }, dispatch] = useStateValue();
     const [searchTerm, setSearchTerm] = useState('');
     const [category, setCategory] = useState('All');
     const navigate = useNavigate();
@@ -18,6 +18,10 @@ function Header() {
         } else if (category !== 'All') {
             navigate(`/category/${category}`);
         }
+    };
+
+    const handleSignOut = () => {
+        dispatch({ type: 'SET_USER', user: null });
     };
 
     return (
@@ -59,10 +63,25 @@ function Header() {
 
                 {/* Right Section Nav */}
                 <div className="header__nav">
-                    <div className="header__option">
-                        <span className="header__optionLineOne">Hello, Guest</span>
-                        <span className="header__optionLineTwo">Sign In</span>
-                    </div>
+                    {user ? (
+                        <div
+                            className="header__option"
+                            role="button"
+                            tabIndex={0}
+                            onClick={handleSignOut}
+                            onKeyDown={(e) => e.key === 'Enter' && handleSignOut()}
+                        >
+                            <span className="header__optionLineOne">Hello, {user.name || 'User'}</span>
+                            <span className="header__optionLineTwo">Sign Out</span>
+                        </div>
+                    ) : (
+                        <Link to="/signup" className="header__link">
+                            <div className="header__option">
+                                <span className="header__optionLineOne">Hello, Guest</span>
+                                <span className="header__optionLineTwo">Sign Up</span>
+                            </div>
+                        </Link>
+                    )}
 
                     <div className="header__option">
                         <span className="header__optionLineOne">Returns</span>

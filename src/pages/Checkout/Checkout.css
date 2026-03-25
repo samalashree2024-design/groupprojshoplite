@@ -52,6 +52,34 @@
     margin-bottom: 5px;
 }
 
+.checkout__addressLabel {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.checkout__addressInput {
+    width: 100%;
+    max-width: 520px;
+    padding: 10px 12px;
+    border: 1px solid #a6a6a6;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    resize: vertical;
+}
+
+.checkout__addressInput:focus {
+    border-color: #f08804;
+    box-shadow: 0 0 0 2px rgba(240, 136, 4, 0.25);
+}
+
+.checkout__addressError {
+    margin-top: 8px;
+    color: #b12704;
+    font-size: 13px;
+}
+
 .checkout__paymentDetails {
     max-width: 400px;
 }

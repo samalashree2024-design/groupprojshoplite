@@ -2,67 +2,75 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin-bottom: -150px;
-    /* Overlap content to mimic Amazon layout */
+    /* This creates the overlap with the products below */
+    margin-bottom: -150px; 
 }
 
 .heroBanner__slider {
     display: flex;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.6s ease-in-out;
     width: 100%;
 }
 
 .heroBanner__image {
+    /* Critical: each image must take up exactly 100% of the slider container */
     min-width: 100%;
-    object-fit: cover;
-    /* Use a mask image style if preferred, we'll use fadeBottom instead */
+    width: 100%;
+    
+    /* This controls how "tall" the banner is. Adjust to 400px if 600px is still too big. */
+    max-height: 600px; 
+    
+    /* Ensures the image isn't stretched/squished */
+    object-fit: cover; 
+    
+    /* The Amazon-style fade effect */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+    z-index: -1;
 }
 
 .heroBanner__btn {
     position: absolute;
-    top: 30%;
-    /* adjusted since bottom falls behind content */
+    top: 25%; /* Keeps buttons centered vertically relative to the visible banner */
     transform: translateY(-50%);
     background: transparent;
     border: none;
-    font-size: 50px;
+    font-size: 60px;
     cursor: pointer;
-    padding: 20px 10px;
-    color: #333;
+    color: white; /* Changed to white for better visibility on dark banners */
+    z-index: 10;
+    transition: 0.2s;
 }
 
 .heroBanner__btn:hover {
-    border: 1px solid #fff;
+    color: #f0c14b; /* Amazon orange hover effect */
 }
 
 .heroBanner__btnLeft {
-    left: 10px;
+    left: 20px;
 }
 
 .heroBanner__btnRight {
-    right: 10px;
+    right: 20px;
 }
 
 .heroBanner__fadeBottom {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 200px;
+    height: 250px;
     background: linear-gradient(to bottom, rgba(234, 237, 237, 0), rgba(234, 237, 237, 1));
     z-index: 1;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .heroBanner {
         margin-bottom: -50px;
     }
-
-    .heroBanner__fadeBottom {
-        height: 100px;
+    .heroBanner__image {
+        max-height: 300px;
     }
-
     .heroBanner__btn {
-        top: 40%;
-        font-size: 30px;
+        font-size: 35px;
     }
 }

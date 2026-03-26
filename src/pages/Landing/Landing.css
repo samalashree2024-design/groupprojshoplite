@@ -1,0 +1,114 @@
+.landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #f3f3f3;
+}
+
+/* Background image fix - covers the screen without zooming too much */
+.landing__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url('./background.jpg'); 
+    
+    /* YOUR PERFECT ALIGNMENT */
+    background-size: cover; 
+    background-position: 10% center; 
+    background-repeat: no-repeat;
+
+    /* --- THE BLUR ADDITION --- */
+   /* Adjust this number (4px, 12px) to change blur strength */
+    transform: scale(1.1); /* This prevents white/leaking edges from the blur */
+}
+
+.landing__container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RESTORED LOGO SIZE & BULB */
+.landing__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.landing__logoIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.landing__cart { 
+    font-size: 60px; /* Restored to your original big size */
+}
+
+.landing__bulb {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 30px; /* Restored to your original bulb size */
+}
+
+.landing__title {
+    font-size: 50px;
+    font-weight: 800;
+    margin-left: 15px;
+    color: #131921;
+}
+
+/* RESTORED AUTH BOX (Back to your original style) */
+.landing__authBox {
+    background: white; /* Removed the glass effect to fix the look */
+    padding: 30px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.landing__btn {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid;
+}
+
+.landing__btn.yellow {
+    background-color: #f0c14b;
+    border-color: #a88734;
+}
+
+.landing__btn.white {
+    background-color: white;
+    border-color: gray;
+}
+
+.landing__divider {
+    margin: 10px 0;
+    color: gray;
+    font-size: 14px;
+}
+/* Keep your button styles the same as they were! */
+.header__bulb {
+    position: absolute !important;
+    top: -8px !important;
+    right: -8px !important;
+    font-size: 14px !important;
+    color: #febd69 !important; /* This forces the yellow color */
+}

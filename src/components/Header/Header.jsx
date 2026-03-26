@@ -22,92 +22,47 @@ function Header() {
 
     const handleSignOut = () => {
         dispatch({ type: 'SET_USER', user: null });
+        navigate('/'); 
     };
 
     return (
         <div className="header__container">
-            {/* Top Main Navbar */}
             <div className="header">
-              {/* --- COPY START --- */}
-<Link to="/" style={{ textDecoration: 'none', color: 'white' }}>
-  <div style={{ 
-    display: 'flex', 
-    alignItems: 'center', 
-    padding: '2px 10px',
-    margin: '0 10px',
-    border: '1px solid transparent',
-    cursor: 'pointer'
-  }}>
-    {/* The New Icon */}
-    <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
-      <span style={{ fontSize: '30px' }}>🛒</span> {/* Shopping Cart Emoji */}
-      <span style={{ 
-        position: 'absolute', 
-        top: '-5px', 
-        right: '-5px', 
-        fontSize: '18px' 
-      }}>💡</span> {/* Lightbulb Emoji */}
-    </div>
-    
-    {/* The Text */}
-    <span style={{ 
-      fontSize: '20px', 
-      fontWeight: '800', 
-      marginLeft: '8px',
-      color: 'white',
-      fontFamily: 'inherit'
-    }}>
-      ShopLite
-    </span>
-  </div>
-</Link>
-{/* --- COPY END --- */}
+                {/* Fixed Logo Section */}
+                <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>
+                    <div className="header__logo">
+                        <div className="header__logoIcon">
+                            <span className="header__cart">🛒</span>
+                            <span className="header__bulb">💡</span>
+                        </div>
+                        <span className="header__logoText">ShopLite</span>
+                    </div>
+                </Link>
 
-                {/* Search Bar */}
                 <div className="header__search">
-                    <select
-                        className="header__categoryDropdown"
-                        value={category}
-                        onChange={(e) => setCategory(e.target.value)}
-                    >
+                    <select className="header__categoryDropdown" value={category} onChange={(e) => setCategory(e.target.value)}>
                         <option value="All">All</option>
                         <option value="Electronics">Electronics</option>
                         <option value="Fashion">Fashion</option>
                         <option value="Home">Home</option>
-                        <option value="Books">Books</option>
-                        <option value="Gaming">Gaming</option>
                     </select>
-                    <input
-                        className="header__searchInput"
-                        type="text"
-                        placeholder="Search Shoplite"
-                        value={searchTerm}
-                        onChange={(e) => setSearchTerm(e.target.value)}
-                        onKeyDown={(e) => e.key === 'Enter' && handleSearch(e)}
-                    />
+                    <input className="header__searchInput" type="text" placeholder="Search Shoplite" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                     <MdSearch className="header__searchIcon" onClick={handleSearch} />
                 </div>
 
-                {/* Right Section Nav */}
                 <div className="header__nav">
-                    {user ? (
-                        <div
-                            className="header__option"
-                            role="button"
-                            tabIndex={0}
-                            onClick={handleSignOut}
-                            onKeyDown={(e) => e.key === 'Enter' && handleSignOut()}
-                        >
-                            <span className="header__optionLineOne">Hello, {user.name || 'User'}</span>
-                            <span className="header__optionLineTwo">Sign Out</span>
-                        </div>
-                    ) : (
+                    {!user ? (
                         <Link to="/signup" className="header__link">
                             <div className="header__option">
                                 <span className="header__optionLineOne">Hello, Guest</span>
-                                <span className="header__optionLineTwo">Sign Up</span>
+                                <span className="header__optionLineTwo">Sign Out</span>
                             </div>
                         </Link>
+                    ) : (
+                        <div onClick={handleSignOut} className="header__option" style={{ cursor: 'pointer' }}>
+                            <span className="header__optionLineOne">Hello, {user.email}</span>
+                            <span className="header__optionLineTwo">Sign Out</span>
+                        </div>
                     )}
 
                     <div className="header__option">
@@ -126,12 +81,8 @@ function Header() {
                 </div>
             </div>
 
-            {/* Secondary Menu (Subnav) */}
             <div className="header__bottom">
-                <p className="header__menuItem">
-                    <MdMenu className="header__menuIcon" />
-                    All
-                </p>
+                <p className="header__menuItem"><MdMenu className="header__menuIcon" /> All</p>
                 <Link to="/category/Electronics" className="header__menuItem">Electronics</Link>
                 <Link to="/category/Fashion" className="header__menuItem">Fashion</Link>
                 <Link to="/category/Home" className="header__menuItem">Home</Link>

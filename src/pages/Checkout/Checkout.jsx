@@ -8,12 +8,77 @@ function Checkout() {
     const [{ cart }] = useStateValue();
     const navigate = useNavigate();
     const [shippingAddress, setShippingAddress] = useState(() => localStorage.getItem('shippingAddress') || '');
+    const [now, setNow] = useState(() => new Date());
+
+    useEffect(() => {
+        const intervalId = window.setInterval(() => setNow(new Date()), 1000);
+        return () => window.clearInterval(intervalId);
+    }, []);
 
     useEffect(() => {
         localStorage.setItem('shippingAddress', shippingAddress);
     }, [shippingAddress]);
 
     const isShippingAddressValid = useMemo(() => shippingAddress.trim().length > 0, [shippingAddress]);
+
+    const deliveryInfo = useMemo(() => {
+        const cutoffHour = 17;
+        const cutoffMinute = 0;
+
+        const addDays = (date, days) => {
+            const d = new Date(date);
+            d.setDate(d.getDate() + days);
+            return d;
+        };
+
+        const buildCutoffForDay = (baseDate) => {
+            const d = new Date(baseDate);
+            d.setHours(cutoffHour, cutoffMinute, 0, 0);
+            return d;
+        };
+
+        const cutoffToday = buildCutoffForDay(now);
+        const isBeforeCutoff = now <= cutoffToday;
+        const shipsAt = isBeforeCutoff ? cutoffToday : buildCutoffForDay(addDays(now, 1));
+
+        const msUntilShip = shipsAt.getTime() - now.getTime();
+        const toHMS = (ms) => {
+            const totalSeconds = Math.floor(Math.max(0, ms) / 1000);
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+            const pad2 = (n) => String(n).padStart(2, '0');
+            return `${pad2(hours)}:${pad2(minutes)}:${pad2(seconds)}`;
+        };
+
+        const estimatedStart = addDays(shipsAt, 3);
+        const estimatedEnd = addDays(shipsAt, 5);
+
+        const dateTimeFmt = new Intl.DateTimeFormat(undefined, {
+            weekday: 'short',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+        });
+
+        const dateFmt = new Intl.DateTimeFormat(undefined, {
+            weekday: 'short',
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+        });
+
+        return {
+            nowText: dateTimeFmt.format(now),
+            shipsAtText: dateTimeFmt.format(shipsAt),
+            isBeforeCutoff,
+            timeUntilShipText: toHMS(msUntilShip),
+            estimatedStartText: dateFmt.format(estimatedStart),
+            estimatedEndText: dateFmt.format(estimatedEnd),
+        };
+    }, [now]);
 
     const handlePlaceOrder = (e) => {
         e.preventDefault();
@@ -83,10 +148,40 @@ function Checkout() {
                     </div>
                 </div>
 
+                {/* Delivery Estimate */}
+                <div className="checkout__section">
+                    <div className="checkout__title">
+                        <h3>3 Delivery estimate</h3>
+                    </div>
+                    <div className="checkout__delivery">
+                        <div className="checkout__deliveryCard" aria-live="polite">
+                            {cart.length === 0 ? (
+                                <p className="checkout__deliveryRow">Add items to your cart to see a delivery estimate.</p>
+                            ) : (
+                                <>
+                                    <p className="checkout__deliveryRow">
+                                        <span className="checkout__deliveryLabel">Current time:</span> {deliveryInfo.nowText}
+                                    </p>
+                                    <p className="checkout__deliveryRow">
+                                        <span className="checkout__deliveryLabel">
+                                            {deliveryInfo.isBeforeCutoff ? 'Order within:' : 'Ships in:'}
+                                        </span>{' '}
+                                        {deliveryInfo.timeUntilShipText} (ships at {deliveryInfo.shipsAtText})
+                                    </p>
+                                    <p className="checkout__deliveryRow">
+                                        <span className="checkout__deliveryLabel">Estimated delivery:</span>{' '}
+                                        {deliveryInfo.estimatedStartText} – {deliveryInfo.estimatedEndText} (10 AM – 6 PM)
+                                    </p>
+                                </>
+                            )}
+                        </div>
+                    </div>
+                </div>
+
                 {/* Review items */}
                 <div className="checkout__section">
                     <div className="checkout__title">
-                        <h3>3 Review items and shipping</h3>
+                        <h3>4 Review items and shipping</h3>
                     </div>
                     <div className="checkout__items">
                         {cart.map((item, idx) => (

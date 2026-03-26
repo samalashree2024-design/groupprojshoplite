@@ -11,16 +11,20 @@ const handleSignIn = (e) => {
     // Change '/' to '/home'
     navigate('/home'); 
 };
-
     return (
         <div className="signin">
             <div className="signin__bg"></div>
             <Link to='/' style={{ textDecoration: 'none' }}>
-                <div className="signin__logo">
-                    <h2 style={{color: "white", fontSize: "40px"}}>ShopLite</h2>
-                </div>
             </Link>
+             
+             <div className="signin__logo"><img
+         className="signin__logo"
+          src="Shoplite1.png"
+          alt="Shoplite logo"
+                />
+                </div>
             <div className="signin__container">
+                
                 <h1>Sign-In</h1>
                 <form>
                     <h5>E-mail</h5>

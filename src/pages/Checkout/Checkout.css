@@ -44,8 +44,27 @@
 
 .checkout__address,
 .checkout__payment,
+.checkout__delivery,
 .checkout__items {
     flex: 0.8;
+}
+
+.checkout__deliveryCard {
+    max-width: 520px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px 14px;
+    background: #f7f7f7;
+}
+
+.checkout__deliveryRow {
+    margin: 6px 0;
+    font-size: 14px;
+    line-height: 1.35;
+}
+
+.checkout__deliveryLabel {
+    font-weight: 700;
 }
 
 .checkout__address p {

@@ -26,11 +26,13 @@
 }
 
 .signin__logo {
-    position: relative;
-    z-index: 1;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
+    width: 200px;
+    height: 100px;
+    zoom:140%;
+    margin-right: 80px;
+    position: relative; /* Add this */
+    z-index: 2;         /* Add this to ensure it sits above the background */
+    object-fit: contain; /* Prevents the logo from looking squashed */
 }
 
 .signin__container {

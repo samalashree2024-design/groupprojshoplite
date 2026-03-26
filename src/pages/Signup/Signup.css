@@ -6,6 +6,7 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+    flex-direction: column
 }
 
 .signup__bg {
@@ -21,6 +22,15 @@
     background-repeat: no-repeat;
     filter: blur(4px) brightness(0.8);
     transform: scale(1.1);
+}
+.signup__logo {
+    width: 200px;
+    height: 100px;
+    zoom:140%;
+    margin-right: 70px;
+    position: relative; /* Add this */
+    z-index: 2;         /* Add this to ensure it sits above the background */
+    object-fit: contain; /* Prevents the logo from looking squashed */
 }
 
 .signup__card {

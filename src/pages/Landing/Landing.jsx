@@ -10,11 +10,11 @@ function Landing() {
 
       <div className="landing__container">
         <div className="landing__logo">
-          <div className="landing__logoIcon">
-            <span className="landing__cart">🛒</span>
-            <span className="landing__bulb">💡</span>
-          </div>
-          <h1 className="landing__title">ShopLite</h1>
+         <img
+         className="header__logo"
+          src="Shoplite1.png"
+          alt="Shoplite logo"
+                />
         </div>
 
         <div className="landing__authBox">

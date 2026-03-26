@@ -53,9 +53,9 @@
 }
 
 .footer__logo {
-    width: 70px;
-    filter: brightness(0) invert(1);
-    margin-bottom: 20px;
+    width: 150px;
+    
+   
 }
 
 .footer__bottom p {

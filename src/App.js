@@ -13,6 +13,7 @@ import Checkout from './pages/Checkout/Checkout';
 import Signup from './pages/Signup/Signup';
 import SignIn from './pages/Sign--In/Sign-In'; // Changed to match your common filename
 import Landing from './pages/Landing/Landing';
+import Orders from './pages/Orders/Orders';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/cart" element={<><Header /><Cart /><Footer /></>} />
           
           <Route path="/checkout" element={<><Header /><Checkout /><Footer /></>} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
       </div>
     </Router>

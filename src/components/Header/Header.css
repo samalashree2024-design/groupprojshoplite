@@ -16,19 +16,10 @@
 
 /* --- LOGO SECTION FIX --- */
 .header__logo {
-    display: flex;
-    align-items: center;
-    margin-left: 10px;
-    margin-right: 20px;
-    text-decoration: none;
-    flex-shrink: 0; /* Stops logo from squashing */
+    width: 150px;
 }
 
-.header__logoIcon {
-    position: relative;
-    display: flex;
-    align-items: center;
-}
+
 
 .header__cart {
     font-size: 24px;

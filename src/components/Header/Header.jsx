@@ -31,11 +31,12 @@ function Header() {
                 {/* Fixed Logo Section */}
                 <Link to="/home" style={{ textDecoration: 'none', color: 'white' }}>
                     <div className="header__logo">
-                        <div className="header__logoIcon">
-                            <span className="header__cart">🛒</span>
-                            <span className="header__bulb">💡</span>
-                        </div>
-                        <span className="header__logoText">ShopLite</span>
+                   <img
+                    className="header__logo"
+                    src="Shoplite1.png"
+                    alt="Shoplite logo"
+                />
+                        
                     </div>
                 </Link>
 
@@ -45,6 +46,8 @@ function Header() {
                         <option value="Electronics">Electronics</option>
                         <option value="Fashion">Fashion</option>
                         <option value="Home">Home</option>
+                        <option value="Gaming">Gaming</option>
+                        <option value="Books">Books</option>
                     </select>
                     <input className="header__searchInput" type="text" placeholder="Search Shoplite" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
                     <MdSearch className="header__searchIcon" onClick={handleSearch} />
@@ -54,7 +57,7 @@ function Header() {
                     {!user ? (
                         <Link to="/signup" className="header__link">
                             <div className="header__option">
-                                <span className="header__optionLineOne">Hello, Guest</span>
+                                <span className="header__optionLineOne"></span>
                                 <span className="header__optionLineTwo">Sign Out</span>
                             </div>
                         </Link>

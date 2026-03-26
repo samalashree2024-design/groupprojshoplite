@@ -15,11 +15,19 @@ function Signup() {
 
     return (
         <div className="signup">
+            
             <div className="signup__bg"></div>
+                         <div className="signup__logo"><img
+         className="signup__logo"
+          src="Shoplite1.png"
+          alt="Shoplite logo"
+                />
+                </div>
             <div className="signup__card">
                 <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-                    <h2 className="signup__brand">🛒💡 ShopLite</h2>
+                  
                 </Link>
+               
                 <h1 className="signup__title">Create account</h1>
                 <form className="signup__form">
                     <label className="signup__label">Your name</label>

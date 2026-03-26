@@ -21,12 +21,9 @@
     
     /* YOUR PERFECT ALIGNMENT */
     background-size: cover; 
-    background-position: 10% center; 
-    background-repeat: no-repeat;
-
-    /* --- THE BLUR ADDITION --- */
-   /* Adjust this number (4px, 12px) to change blur strength */
-    transform: scale(1.1); /* This prevents white/leaking edges from the blur */
+    background-position: 6% center; 
+    background-repeat: no-repeat;   
+  
 }
 
 .landing__container {
@@ -39,9 +36,9 @@
 
 /* RESTORED LOGO SIZE & BULB */
 .landing__logo {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
+    width:150px;
+    zoom:250%;
+    height:70px;
 }
 
 .landing__logoIcon {

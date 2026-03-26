@@ -62,7 +62,7 @@ function Footer() {
             <div className="footer__bottom">
                 <img
                     className="footer__logo"
-                    src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"
+                    src="Shoplite1.png"
                     alt="Shoplite logo"
                 />
                 <p>© 2026, Shoplite.com, Inc. or its affiliates</p>

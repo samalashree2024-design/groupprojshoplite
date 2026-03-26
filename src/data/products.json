@@ -4,7 +4,7 @@
     "title": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
     "price": 989.99,
     "rating": 5,
-    "image": "https://m.media-amazon.com/images/I/71yzJoE7WlL._AC_SX679_.jpg",
+   "image": "/images/iphone.jpg",
     "category": "Electronics"
   },
   {
@@ -12,15 +12,15 @@
     "title": "Sony WH-1000XM5 Wireless Noise Canceling Headphones",
     "price": 398.00,
     "rating": 4,
-    "image": "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SX679_.jpg",
+   "image": "https://m.media-amazon.com/images/I/51aXvjzcukL._AC_SX679_.jpg",
     "category": "Electronics"
   },
   {
     "id": "3",
-    " title": "Gildan Men's Crew T-Shirts, Multipack, Style G1100",
+    "title": "Gildan Men's Crew T-Shirts, Multipack, Style G1100",
     "price": 18.99,
     "rating": 4,
-    "image": "https://m.media-amazon.com/images/I/71uA-3m-PXL._AC_UX679_.jpg",
+    "image":"/images/shirt.jpg",
     "category": "Fashion"
   },
   {
@@ -28,7 +28,7 @@
     "title": "ASICS Women's Gel-Venture 8 Running Shoes",
     "price": 54.95,
     "rating": 4,
-    "image": "https://m.media-amazon.com/images/I/71yZYx77YRL._AC_UY695_.jpg",
+    "image": "/images/shoes.jpg",
     "category": "Fashion"
   },
   {
@@ -36,7 +36,7 @@
     "title": "iRobot Roomba 694 Robot Vacuum-Wi-Fi Connectivity",
     "price": 274.99,
     "rating": 4,
-    "image": "https://m.media-amazon.com/images/I/81Lns-uS4rL._AC_SX679_.jpg",
+    "image": "/images/robot.jpg",
     "category": "Home"
   },
   {
@@ -44,7 +44,7 @@
     "title": "Cuisinart 11-Piece Cookware Set",
     "price": 119.00,
     "rating": 5,
-    "image": "https://m.media-amazon.com/images/I/81I-S7WDBLL._AC_SX679_.jpg",
+    "image":"/images/cookware.jpg",
     "category": "Home"
   },
   {
@@ -76,7 +76,7 @@
     "title": "DualSense Wireless Controller",
     "price": 69.00,
     "rating": 5,
-    "image": "https://m.media-amazon.com/images/I/61r5fM7FveL._SX679_.jpg",
+    "image": "/images/game.jpg",
     "category": "Gaming"
   },
   {
@@ -84,7 +84,7 @@
     "title": "Nintendo Switch – OLED Model w/ White Joy-Con",
     "price": 349.99,
     "rating": 5,
-    "image": "https://m.media-amazon.com/images/I/71fL-b2lW-L._SX679_.jpg",
+    "image": "/images/oled.jpg",
     "category": "Gaming"
   }
 ]

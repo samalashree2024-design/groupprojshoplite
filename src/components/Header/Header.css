@@ -7,27 +7,53 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #131921;
-    /* Amazon dark blue */
+    background-color: #131921; /* Amazon dark blue */
     position: sticky;
     top: 0;
     z-index: 100;
     padding: 0 10px;
 }
 
+/* --- LOGO SECTION FIX --- */
 .header__logo {
-    width: 100px;
-    object-fit: contain;
-    margin: 0 20px;
-    margin-top: 18px;
-    filter: brightness(0) invert(1);
-    /* Tweak amazon logo to white */
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    text-decoration: none;
+    flex-shrink: 0; /* Stops logo from squashing */
 }
 
-/* Search bar styles */
+.header__logoIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header__cart {
+    font-size: 24px;
+}
+
+.header__bulb {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 14px;
+    /* This ensures the bulb stays yellow even if text is white */
+    color: #febd69 !important; 
+}
+
+.header__logoText {
+    font-size: 20px;
+    font-weight: 800;
+    margin-left: 8px;
+    color: white;
+}
+
+/* --- SEARCH BAR SECTION --- */
 .header__search {
     display: flex;
-    flex: 1;
+    flex: 1; /* Pushes nav items to the right */
     align-items: center;
     border-radius: 4px;
     overflow: hidden;
@@ -36,7 +62,6 @@
 
 .header__search:focus-within {
     box-shadow: 0 0 0 2px #f90;
-    /* Amazon focus orange */
 }
 
 .header__categoryDropdown {
@@ -49,7 +74,6 @@
     outline: none;
     border-right: 1px solid #cdcdcd;
     cursor: pointer;
-    border-radius: 4px 0 0 4px;
 }
 
 .header__searchInput {
@@ -65,21 +89,22 @@
     height: 100% !important;
     width: 45px !important;
     background-color: #febd69;
-    /* Amazon orange button */
     color: #333;
     cursor: pointer;
     border-radius: 0 4px 4px 0;
 }
 
-.header__searchIcon:hover {
-    background-color: #f3a847;
-}
-
-/* Nav styles */
+/* --- NAV SECTION --- */
 .header__nav {
     display: flex;
     justify-content: space-evenly;
     padding: 0 10px;
+    flex-shrink: 0;
+}
+
+.header__link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .header__option {
@@ -119,18 +144,14 @@
     font-size: 26px;
 }
 
-.header__optionBasket:hover {
-    border: 1px solid white;
-    border-radius: 2px;
-}
-
 .header__basketCount {
     margin-left: 5px;
     color: #f08804;
     font-size: 16px;
+    font-weight: 700;
 }
 
-/* Bottom Secondary Nav */
+/* --- BOTTOM NAV --- */
 .header__bottom {
     display: flex;
     align-items: center;
@@ -147,17 +168,6 @@
     cursor: pointer;
     font-weight: 500;
     padding: 5px;
-    border: 1px solid transparent;
-}
-
-.header__menuItem:hover {
-    border: 1px solid white;
-    border-radius: 2px;
-}
-
-.header__menuIcon {
-    margin-right: 5px;
-    font-size: 20px;
 }
 
 /* Mobile Responsiveness */
@@ -165,34 +175,14 @@
     .header {
         flex-wrap: wrap;
         height: auto;
-        padding: 10px;
     }
-
     .header__search {
         order: 3;
         width: 100%;
         margin-top: 10px;
-        flex: none;
     }
-
-    .header__logo {
-        margin-top: 5px;
-        margin-bottom: 5px;
-    }
-
     .header__nav {
         flex: 1;
         justify-content: flex-end;
-    }
-
-    .header__option {
-        display: none;
-        /* Hide standard options on small screens for simplicity */
-    }
-
-    .header__bottom {
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 8px 10px;
     }
 }

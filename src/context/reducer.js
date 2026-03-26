@@ -1,9 +1,17 @@
 // Load cart from local storage if available
 const savedCart = localStorage.getItem("cart");
+const savedUser = localStorage.getItem("user");
+let initialUser = null;
+
+try {
+    initialUser = savedUser ? JSON.parse(savedUser) : null;
+} catch {
+    initialUser = null;
+}
 
 export const initialState = {
     cart: savedCart ? JSON.parse(savedCart) : [],
-    user: null, // Keep null for frontend-only auth simulation
+    user: initialUser, // Frontend-only auth simulation
 };
 
 // Selector
@@ -68,6 +76,11 @@ const reducer = (state, action) => {
             };
 
         case "SET_USER":
+            if (action.user) {
+                localStorage.setItem("user", JSON.stringify(action.user));
+            } else {
+                localStorage.removeItem("user");
+            }
             return {
                 ...state,
                 user: action.user

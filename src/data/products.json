@@ -4,7 +4,11 @@
     "title": "Apple iPhone 14 Pro Max, 256GB, Deep Purple - Unlocked (Renewed Premium)",
     "price": 989.99,
     "rating": 5,
+<<<<<<< HEAD
    "image": "/images/iphone.jpg",
+=======
+    "image": "/iphone.jpg",
+>>>>>>> 4b05ad7eef744da5e36d588c4363f0cfb4244d5e
     "category": "Electronics"
   },
   {

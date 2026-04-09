@@ -12,7 +12,7 @@ function Landing() {
         <div className="landing__logo">
          <img
          className="header__logo"
-          src="Shoplite1.png"
+          src="Shoplitelogo3.png"
           alt="Shoplite logo"
                 />
         </div>

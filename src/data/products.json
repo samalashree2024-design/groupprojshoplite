@@ -60,7 +60,7 @@
   },
   {
     "id": "8",
-    "title": "System Design Interview – An insider's guide",
+    "title": "System Design Interview - An insider's guide",
     "price": 37.99,
     "rating": 5,
     "image": "https://m.media-amazon.com/images/I/611X8GI7hpL._SY466_.jpg",
@@ -84,10 +84,226 @@
   },
   {
     "id": "11",
-    "title": "Nintendo Switch – OLED Model w/ White Joy-Con",
+    "title": "Nintendo Switch - OLED Model w/ White Joy-Con",
     "price": 349.99,
     "rating": 5,
     "image": "/images/oled.jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "12",
+    "title": "Apple MacBook Air 13-inch (M2, 8GB/256GB) - Midnight",
+    "price": 1099.00,
+    "rating": 5,
+    "image": "https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111867_SP869-2022-macbook-air-m2-colors.png",
+    "category": "Electronics"
+  },
+  {
+    "id": "13",
+    "title": "Logitech MX Master 3S Wireless Mouse (USB-C)",
+    "price": 99.99,
+    "rating": 5,
+    "image": "https://resource.logitech.com/w_544%2Ch_466%2Car_7%3A6%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-black-new-1.png",
+    "category": "Electronics"
+  },
+  {
+    "id": "14",
+    "title": "55-inch 4K Ultra HD Smart TV with HDR",
+    "price": 429.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/7947955/pexels-photo-7947955.jpeg?cs=srgb&dl=pexels-rdne-7947955.jpg&fm=jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "15",
+    "title": "65W USB-C Fast Charger (2-Port PD)",
+    "price": 29.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/19983034/pexels-photo-19983034.jpeg?cs=srgb&dl=pexels-mintworkspace-19983034.jpg&fm=jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "16",
+    "title": "Men's Lightweight Running Sneakers - Breathable Mesh",
+    "price": 64.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/8373049/pexels-photo-8373049.jpeg?cs=srgb&dl=pexels-sneepcrew-8373049.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "17",
+    "title": "Classic Denim Jacket - Everyday Fit",
+    "price": 49.99,
+    "rating": 5,
+    "image": "https://images.pexels.com/photos/6765179/pexels-photo-6765179.jpeg?cs=srgb&dl=pexels-cottonbro-6765179.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "18",
+    "title": "RFID Blocking Slim Leather Wallet",
+    "price": 24.50,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/27467357/pexels-photo-27467357.jpeg?cs=srgb&dl=pexels-ekrulila-27467357.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "19",
+    "title": "Air Fryer 5.8QT - Crispy & Oil-Free Cooking",
+    "price": 89.99,
+    "rating": 5,
+    "image": "https://images.pexels.com/photos/29461935/pexels-photo-29461935.jpeg?cs=srgb&dl=pexels-fotios-photos-29461935.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "20",
+    "title": "Memory Foam Pillow Set (Pack of 2)",
+    "price": 39.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/4989081/pexels-photo-4989081.jpeg?cs=srgb&dl=pexels-anastasia-shuraeva-4989081.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "21",
+    "title": "LED Strip Lights 16.4ft - RGB App Control",
+    "price": 18.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/8108681/pexels-photo-8108681.jpeg?cs=srgb&dl=pexels-mikhail-nilov-8108681.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "22",
+    "title": "The Psychology of Money - Timeless Lessons on Wealth",
+    "price": 14.49,
+    "rating": 5,
+    "image": "https://covers.openlibrary.org/b/id/11301348-L.jpg",
+    "category": "Books"
+  },
+  {
+    "id": "23",
+    "title": "Deep Work - Rules for Focused Success in a Distracted World",
+    "price": 13.99,
+    "rating": 5,
+    "image": "https://covers.openlibrary.org/b/id/8763269-L.jpg",
+    "category": "Books"
+  },
+  {
+    "id": "24",
+    "title": "Mechanical Gaming Keyboard - RGB Backlit (Blue Switches)",
+    "price": 59.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/28842075/pexels-photo-28842075.jpeg?cs=srgb&dl=pexels-atahandemir-28842075.jpg&fm=jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "25",
+    "title": "Gaming Mouse 16000 DPI - Lightweight Ergonomic Design",
+    "price": 34.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/2115256/pexels-photo-2115256.jpeg?cs=srgb&dl=pexels-johnpet-2115256.jpg&fm=jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "26",
+    "title": "Xbox Series X Console (1TB)",
+    "price": 499.00,
+    "rating": 5,
+    "image": "https://cms-assets.xboxservices.com/assets/bc/40/bc40fdf3-85a6-4c36-af92-dca2d36fc7e5.png?n=642227_Hero-Gallery-0_A1_857x676.png",
+    "category": "Gaming"
+  },
+  {
+    "id": "27",
+    "title": "UltraSlim Laptop 14-inch, 16GB RAM, 512GB SSD",
+    "price": 899.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/162622/facebook-login-office-laptop-business-162622.jpeg?cs=srgb&dl=pexels-pixabay-162622.jpg&fm=jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "28",
+    "title": "Fitness Smartwatch with Heart Rate & Sleep Tracking",
+    "price": 149.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/3999644/pexels-photo-3999644.jpeg?cs=srgb&dl=pexels-lukas-3999644.jpg&fm=jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "29",
+    "title": "True Wireless Earbuds with Charging Case",
+    "price": 59.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/7417547/pexels-photo-7417547.jpeg?cs=srgb&dl=pexels-mikebirdy-7417547.jpg&fm=jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": "30",
+    "title": "Polarized Aviator Sunglasses - UV400 Protection",
+    "price": 19.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/1798665/pexels-photo-1798665.jpeg?cs=srgb&dl=pexels-jemsanchez-1798665.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "31",
+    "title": "Premium Espresso Coffee Machine with Milk Frother",
+    "price": 199.99,
+    "rating": 5,
+    "image": "https://images.pexels.com/photos/2899719/pexels-photo-2899719.jpeg?cs=srgb&dl=pexels-chevanon-photography-2899719.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "32",
+    "title": "High-Speed Blender 1000W for Smoothies & Shakes",
+    "price": 79.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/7937006/pexels-photo-7937006.jpeg?cs=srgb&dl=pexels-julia-khalimova-7937006.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "33",
+    "title": "Minimal Desk Lamp - Warm Ambient Light",
+    "price": 29.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/15664927/pexels-photo-15664927.jpeg?cs=srgb&dl=pexels-asadphoto-15664927.jpg&fm=jpg",
+    "category": "Home"
+  },
+  {
+    "id": "34",
+    "title": "Hardcover Notebook & Reading Bundle (Set of 3)",
+    "price": 24.99,
+    "rating": 5,
+    "image": "https://images.pexels.com/photos/5530776/pexels-photo-5530776.jpeg?cs=srgb&dl=pexels-tima-miroshnichenko-5530776.jpg&fm=jpg",
+    "category": "Books"
+  },
+  {
+    "id": "35",
+    "title": "Floral Summer Dress - Lightweight & Comfortable",
+    "price": 39.99,
+    "rating": 5,
+    "image": "https://images.pexels.com/photos/15513208/pexels-photo-15513208.jpeg?cs=srgb&dl=pexels-nektaria-kleopoulos-417944344-15513208.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "36",
+    "title": "Soft Cotton T-Shirt - Everyday Essential",
+    "price": 14.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/18186105/pexels-photo-18186105.jpeg?cs=srgb&dl=pexels-rdne-18186105.jpg&fm=jpg",
+    "category": "Fashion"
+  },
+  {
+    "id": "37",
+    "title": "Ergonomic Gaming Chair - High Back Support",
+    "price": 159.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/7862645/pexels-photo-7862645.jpeg?cs=srgb&dl=pexels-rahul-7862645.jpg&fm=jpg",
+    "category": "Gaming"
+  },
+  {
+    "id": "38",
+    "title": "Over-Ear Gaming Headset with Mic - Noise Isolating",
+    "price": 49.99,
+    "rating": 4,
+    "image": "https://images.pexels.com/photos/28993055/pexels-photo-28993055.jpeg?cs=srgb&dl=pexels-osmachko-28993055.jpg&fm=jpg",
     "category": "Gaming"
   }
 ]

@@ -89,6 +89,27 @@
     outline: none;
 }
 
+.signup__input--error {
+    border-color: #b12704;
+    box-shadow: 0 0 0 2px rgba(177, 39, 4, 0.12);
+}
+
+.signup__errorText {
+    margin: -10px 0 12px;
+    font-size: 12px;
+    color: #b12704;
+}
+
+.signup__errorSummary {
+    margin: 12px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid rgba(177, 39, 4, 0.35);
+    border-radius: 8px;
+    background: rgba(177, 39, 4, 0.06);
+    color: #b12704;
+    font-size: 13px;
+}
+
 .signup__button {
     margin-top: 10px;
     background-color: #ffd814;
@@ -98,6 +119,11 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: 600;
+}
+
+.signup__button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 .signup__footer {

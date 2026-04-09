@@ -17,7 +17,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
-    background-image: url('./background.jpg'); 
+    background-image: url('./bgneon.jpg'); 
     
     /* YOUR PERFECT ALIGNMENT */
     background-size: cover; 
@@ -36,10 +36,12 @@
 
 /* RESTORED LOGO SIZE & BULB */
 .landing__logo {
+    position :relative;
     width:150px;
-    zoom:250%;
-    height:70px;
-}
+    zoom:600%;
+    height:30px;
+    top:-20px;
+    }
 
 .landing__logoIcon {
     position: relative;
@@ -67,7 +69,9 @@
 
 /* RESTORED AUTH BOX (Back to your original style) */
 .landing__authBox {
-    background: white; /* Removed the glass effect to fix the look */
+    position:relative;
+    top:-120px;
+    background:#eac5e2;
     padding: 30px;
     border: 1px solid lightgray;
     border-radius: 8px;
@@ -87,8 +91,8 @@
 }
 
 .landing__btn.yellow {
-    background-color: #f0c14b;
-    border-color: #a88734;
+     background-color: white;
+    border-color: gray;
 }
 
 .landing__btn.white {

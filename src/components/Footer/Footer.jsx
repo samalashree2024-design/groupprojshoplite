@@ -2,16 +2,35 @@ import React from 'react';
 import './Footer.css';
 
 function Footer() {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
-
     return (
         <div className="footer">
             <div className="footer__backToTop" onClick={scrollToTop}>
                 Back to top
             </div>
-
             <div className="footer__linksContainer">
                 <div className="footer__linkCol">
                     <h3>Get to Know Us</h3>
@@ -23,7 +42,6 @@ function Footer() {
                         <li>Shoplite Devices</li>
                     </ul>
                 </div>
-
                 <div className="footer__linkCol">
                     <h3>Make Money with Us</h3>
                     <ul>
@@ -34,7 +52,6 @@ function Footer() {
                         <li>Self-Publish with Us</li>
                     </ul>
                 </div>
-
                 <div className="footer__linkCol">
                     <h3>Shoplite Payment Products</h3>
                     <ul>
@@ -44,11 +61,10 @@ function Footer() {
                         <li>Shoplite Currency Converter</li>
                     </ul>
                 </div>
-
                 <div className="footer__linkCol">
                     <h3>Let Us Help You</h3>
                     <ul>
-                        <li>Shoplite and COVID-19</li>
+                        <li>Shoplite</li>
                         <li>Your Account</li>
                         <li>Your Orders</li>
                         <li>Shipping Rates & Policies</li>
@@ -58,11 +74,10 @@ function Footer() {
                     </ul>
                 </div>
             </div>
-
             <div className="footer__bottom">
                 <img
                     className="footer__logo"
-                    src="Shoplite1.png"
+                    src="Shoplitelogo3.png"
                     alt="Shoplite logo"
                 />
                 <p>© 2026, Shoplite.com, Inc. or its affiliates</p>
@@ -70,5 +85,4 @@ function Footer() {
         </div>
     );
 }
-
 export default Footer;

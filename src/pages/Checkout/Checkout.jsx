@@ -2,10 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useStateValue } from '../../context/StateProvider';
 import { getCartTotal, getCartItemsCount } from '../../context/reducer';
+import { addOrder } from '../../utils/orders';
 import './Checkout.css';
 
 function Checkout() {
-    const [{ cart }] = useStateValue();
+    const [{ cart, user }, dispatch] = useStateValue();
     const navigate = useNavigate();
     const [shippingAddress, setShippingAddress] = useState(() => localStorage.getItem('shippingAddress') || '');
     const [now, setNow] = useState(() => new Date());
@@ -82,12 +83,42 @@ function Checkout() {
 
     const handlePlaceOrder = (e) => {
         e.preventDefault();
+        if (!user) {
+            alert('Please sign in to place an order.');
+            navigate('/signin');
+            return;
+        }
         if (!isShippingAddressValid) {
             alert('Please enter a shipping address.');
             return;
         }
-        alert('Order placed successfully! (UI Simulation Only)');
-        navigate('/');
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+            navigate('/cart');
+            return;
+        }
+
+        const createId = () => {
+            if (typeof crypto !== 'undefined' && crypto?.randomUUID) return crypto.randomUUID();
+            return `ord_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 10)}`;
+        };
+
+        const order = {
+            id: createId(),
+            userEmail: user.email,
+            userName: user.name || '',
+            createdAt: new Date().toISOString(),
+            shippingAddress: shippingAddress.trim(),
+            items: cart,
+            total: Number(getCartTotal(cart) || 0),
+            status: 'Placed',
+        };
+
+        addOrder(order);
+        dispatch({ type: 'CLEAR_CART' });
+
+        alert('Order placed successfully!');
+        navigate('/account');
     };
 
     return (

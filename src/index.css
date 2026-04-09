@@ -6,7 +6,17 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  background-color: #EAEDED; /* Amazon-like light gray background */
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Fixed header offset (set by Header.jsx) */
+:root {
+  --app-header-height: 0px;
+}
+
+body.app--hasHeader {
+  padding-top: var(--app-header-height);
 }
 
 a {

@@ -19,6 +19,7 @@ function ProductCard({ id, title, image, price, rating, category }) {
                 category,
             },
         });
+        window.alert(`Added "${title}" to cart.`);
     };
 
     return (

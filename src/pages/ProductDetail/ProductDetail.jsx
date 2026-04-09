@@ -28,6 +28,7 @@ function ProductDetail() {
             type: 'ADD_TO_CART',
             item: { ...product }
         });
+        window.alert(`Added "${product.title}" to cart.`);
     };
 
     return (

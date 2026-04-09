@@ -86,6 +86,14 @@ const reducer = (state, action) => {
                 user: action.user
             }
 
+        case "CLEAR_CART":
+            newCart = [];
+            localStorage.setItem("cart", JSON.stringify(newCart));
+            return {
+                ...state,
+                cart: newCart,
+            };
+
         default:
             return state;
     }

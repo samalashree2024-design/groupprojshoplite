@@ -67,6 +67,27 @@
     border-radius: 3px;
 }
 
+.signin__input--error {
+    border-color: #b12704 !important;
+    box-shadow: 0 0 0 2px rgba(177, 39, 4, 0.12);
+}
+
+.signin__errorText {
+    margin: -6px 0 10px;
+    font-size: 12px;
+    color: #b12704;
+}
+
+.signin__errorSummary {
+    margin: 10px 0 14px;
+    padding: 10px 12px;
+    border: 1px solid rgba(177, 39, 4, 0.35);
+    border-radius: 8px;
+    background: rgba(177, 39, 4, 0.06);
+    color: #b12704;
+    font-size: 13px;
+}
+
 .signin__container > p {
     margin-top: 15px;
     font-size: 12px;
@@ -82,6 +103,11 @@
     border-color: #a88734 #9c7e31 #846a29;
     cursor: pointer;
     font-weight: bold;
+}
+
+.signin__signInButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 .signin__registerButton {
